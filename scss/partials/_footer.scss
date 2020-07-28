@@ -1,0 +1,33 @@
+/* ************************************************************************** */
+/* FOOTER Sections ********************************************************** */
+/* ************************************************************************** */
+/* footer 1 ***************************************************************** */
+
+// footer 2
+.footer-2 {
+  background: $color-main;
+  padding: 5px 0;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: $color-white;
+
+    &:hover {
+      color: lighten($color-light-accent, 20);
+      text-decoration: none;
+    }
+  }
+
+  .containerish {
+
+    .sec-info {
+      text-align: center;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

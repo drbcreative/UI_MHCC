@@ -1,0 +1,169 @@
+/* ************************************************************************** */
+/* Typography *************************************************************** */
+/* ************************************************************************** */
+@import "https://use.fontawesome.com/releases/v5.4.1/css/all.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'font-family: ''Raleway', sans-serif;
+
+// General Font Setup
+// Headers
+h1,
+h2,
+h3,
+h4,
+h5 h6 {
+  margin: 0 !important;
+}
+
+/* Primary Header */
+h1 {
+  font-family: $font-secondary;
+  font-size: 3.750em; // 60px
+  line-height: 3.750em;
+
+  &.is-light {
+    font-weight: 300 !important;
+  }
+  &.is-bold {
+    font-weight: 600 !important;
+  }
+
+}
+
+h2 {
+  font-family: $font-secondary;
+  font-size: 3.125em; // 50px
+  line-height: 3.125em;
+
+  &.is-light {
+    font-weight: 300 !important;
+  }
+  &.is-bold {
+    font-weight: 600 !important;
+  }
+}
+
+h3 {
+  font-family: $font-secondary;
+  font-size: 2.5em; // 40px
+  line-height: 2.5em;
+
+  &.is-light {
+    font-weight: 300 !important;
+  }
+  &.is-bold {
+    font-weight: 600 !important;
+  }
+}
+
+h4 {
+  font-family: $font-secondary;
+  font-size: 2.063em; // 33px
+  line-height: 2.063em;
+
+  &.is-light {
+    font-weight: 300 !important;
+  }
+  &.is-bold {
+    font-weight: 600 !important;
+  }
+}
+
+h4 {
+  font-family: $font-secondary;
+  font-size: 1.500em; // 24px
+  line-height: 1.500em;
+
+  &.is-light {
+    font-weight: 300 !important;
+  }
+  &.is-bold {
+    font-weight: 600 !important;
+  }
+}
+
+h6 {
+  font-family: $font-secondary;
+}
+
+
+//Body Text
+.body-copy {
+  font-size: 1rem; // 18px
+  line-height: calc(1 * 2);
+  font-family: $font-primary;
+  font-weight: 400;
+
+  &.is-light {
+    font-weight: 300;
+  }
+
+  &.is-italic {
+    font-style: italic;
+  }
+
+  &.is-bold {
+    font-weight: 700;
+  }
+}
+
+/* Lead Text (hero) */
+.lead-copy {
+  font-size: 1.125rem; // 18px
+  line-height: calc(1.125rem * 1.5);
+  font-family: $font-primary;
+
+  &.is-bold {
+    font-weight: 700;
+  }
+}
+
+.footer-copy {
+  font-size: 1rem;
+  line-height:24px;
+  font-family: $font-primary;
+
+  &.is-bold {
+    font-weight: 700;
+  }
+}
+
+/* Footer2 Text */
+.small-copy {
+  font-size: 15px;
+  line-height: calc(12px * 1.5);
+  font-family: $font-primary;
+}
+.fine-print {
+  font-size: 12px;
+  line-height: 18px;
+  font-family: $font-primary;
+  font-style: italic;
+}
+
+/* Text Modifiers */
+.wrap-75 {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+input {
+  font-family: $font-primary;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  h2 {
+    font-size: 1rem !important;
+    line-height: 1rem !important;
+  }
+}

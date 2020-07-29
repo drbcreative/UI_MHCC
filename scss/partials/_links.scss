@@ -53,17 +53,17 @@
   text-decoration: none;
 
   &:hover {
-    color: $color-accent;
+    color: $color-main;
   }
 }
 .sec-link-dark {
   @extend .body-copy;
   font-weight: 700;
-  color: $color-copy;
+  color: $color-main;
   text-decoration: none;
 
   &:hover {
-    color: $color-accent;
+    color: lighten($color-main, 20);
   }
 }
 

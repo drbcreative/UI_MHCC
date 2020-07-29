@@ -24,7 +24,7 @@
 /* General Button Style */
 @mixin ui-btn {
   font-family: $font-secondary;
-  font-size: 1rem;
+  font-size: 15px;
   font-weight: 600;
   font-style: normal;
   letter-spacing: 0.1rem;
@@ -35,7 +35,7 @@
   width: 100%;
   // width: auto;
   padding: 1.3rem 1.5rem 1rem 1.5rem;
-  border-radius: 50px;
+  border-radius: 10px;
   text-decoration: none;
   margin-bottom: .5rem;
   @include btn-fade;
@@ -50,12 +50,12 @@
 /* Main Button Color ******************************************************** */
 .ui-btn-main {
   @include ui-btn;
-  background-color: $color-main;
+  background-image: linear-gradient(45deg, #009DA6, #76C5FF);
   color: $color-white;
 
   &:hover {
     text-decoration: none;
-    background-color: $color-accent;
+    background-image: linear-gradient(-45deg, lighten(#009DA6, 20), #76C5FF);
     color: $color-white;
   }
 }

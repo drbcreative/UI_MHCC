@@ -21,13 +21,14 @@ h5 h6 {
 /* Primary Header */
 h1 {
   font-family: $font-secondary;
-  font-size: 3.750em; // 60px
-  line-height: 3.750em;
+  font-size: 3.50em; // 60px
+  line-height: 3.5rem;
+  font-weight: 300;
 
-  &.is-light {
+  .is-light {
     font-weight: 300 !important;
   }
-  &.is-bold {
+  .is-bold {
     font-weight: 600 !important;
   }
 
@@ -35,52 +36,55 @@ h1 {
 
 h2 {
   font-family: $font-secondary;
-  font-size: 3.125em; // 50px
-  line-height: 3.125em;
+  font-size: 3.125rem; // 50px
+  line-height: 3.125rem;
+  font-weight: 300;
 
-  &.is-light {
+  .is-light {
     font-weight: 300 !important;
   }
-  &.is-bold {
+  .is-bold {
     font-weight: 600 !important;
   }
 }
 
 h3 {
   font-family: $font-secondary;
-  font-size: 2.5em; // 40px
-  line-height: 2.5em;
+  font-size: 2.5rem; // 40px
+  line-height: 2.5rem;
+  font-weight: 300;
 
-  &.is-light {
+  .is-light {
     font-weight: 300 !important;
   }
-  &.is-bold {
+  .is-bold {
     font-weight: 600 !important;
   }
 }
 
 h4 {
   font-family: $font-secondary;
-  font-size: 2.063em; // 33px
-  line-height: 2.063em;
+  font-size: 2.063rem; // 33px
+  line-height: 2.063rem;
+  font-weight: 300;
 
-  &.is-light {
+  .is-light {
     font-weight: 300 !important;
   }
-  &.is-bold {
+  .is-bold {
     font-weight: 600 !important;
   }
 }
 
 h4 {
   font-family: $font-secondary;
-  font-size: 1.500em; // 24px
-  line-height: 1.500em;
+  font-size: 1.500rem; // 24px
+  line-height: 1.500rem;
 
-  &.is-light {
+  .is-light {
     font-weight: 300 !important;
   }
-  &.is-bold {
+  .is-bold {
     font-weight: 600 !important;
   }
 }
@@ -158,12 +162,15 @@ input {
 
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 3rem;
+    line-height: 3rem;
   }
 
   h2 {
-    font-size: 1rem !important;
-    line-height: 1rem !important;
+    font-size: 2rem !important;
+    line-height: 2rem !important;
+  }
+  h3 {
+    font-size: 1.5rem !important;
   }
 }

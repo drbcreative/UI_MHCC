@@ -4,5 +4,540 @@
 // hero
 .hero {
   background: url('../images/landing_bg@2x.jpg');
-  height: 812px;
+  position: relative;
+  height: 100vh;
+
+  @include isXLarge {
+    height: 750px;
+  }
+
+  .hero-intro {
+    background: url('../images/hero_bg@2x.jpg');
+    background-size: cover;
+    background-position: center right;
+    width: 100%;
+    height: 100%;
+    h1 {display: inline-block;}
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+
+    .col-left {
+      display: none;
+
+      @include isLarge {
+        display: block;
+      }
+    }
+    .col-right {
+      padding: 20px;
+      text-align: center;
+
+      @include isLarge {
+        text-align: left;
+      }
+    }
+
+
+    @include isLarge {
+      height: 647px;
+      background-size: cover;
+      background-position: top 100px;
+      position: absolute;
+      top: 150px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 10px;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include isRetina {
+      background-size: contain;
+      width: 1293px;
+      height: 647px;
+
+    }
+  }
+}
+
+// PROGRAMS
+.programs {
+  background: url('../images/programs_bg@2x.jpg') center center / cover;
+  min-height: 300px;
+  padding: 4rem 0;
+
+  h2, h3 {
+    display: inline-block;
+    white-space: normal;
+  }
+  .containerish {
+    padding: 40px 20px;
+    max-width: 1200px;
+
+    .program-links {
+      li {
+        margin-bottom: 1rem;
+        @include isXLarge {
+          display: inline;
+          margin-right: 2rem;
+
+        }
+
+        .nav-divider {
+          display: none;
+
+          @include isXLarge {
+            display: inline-block;
+            height: 23px;
+            width: 2px;
+            padding-top: 10px;
+          }
+        }
+      }
+      .program-link {
+        font-family: $font-primary;
+        color: $color-copy;
+        font-size: 18px;
+        text-decoration: none;
+        position: relative;
+
+        @include isXLarge {
+          &:hover {
+            color: $color-main;
+            // &::after {
+            //   content: url('../images/down-arrow.png');
+            //   position: absolute;
+            //   top: 30px;
+            //   left: 50%;
+            //   transform: translateX(-50%);
+            // }
+          }
+        }
+
+        &.active {
+          color: $color-black;
+          font-weight: 600;
+
+          @include isXLarge {
+            &::after {
+              content: url('../images/down-arrow.png');
+              position: absolute;
+              top: 30px;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+        }
+
+        @include isLarge {
+        font-size: 23px;
+      }
+      }
+    }
+
+    .program-info {
+      display: grid;
+
+      @include isLarge {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin-top: 3rem;
+      }
+
+      .col-right {
+        .program-slider {
+          height: 500px;
+          position: relative;
+          @include isMedium {
+            height: 900px;
+          }
+
+          @include isLarge {
+            height: 600px;
+          }
+
+          @include isXLarge {
+            height: 750px;
+          }
+          .img-container {
+            position: relative;
+            .arrows {
+              position: absolute;
+              left: 40px;
+              bottom: 15px;
+              img {
+                height: 74px;
+                width: 74px;
+              }
+            }
+          }
+          .db-dots {
+            // background-color: red;
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .slider-dot {
+              height: 11px;
+              width: 11px;
+              border-radius: 50px;
+              background-color: #E0E0E0;
+              margin-right: 1rem;
+
+              &:hover {
+                background-color: $color-main;
+              }
+
+              &.active {
+                background-color: $color-main;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+// fast-track
+.fast-track {
+  background: url('../images/fast_track_bg@2x.jpg') center center / cover;
+  padding: 40px 20px 0 20px;
+  position: relative;
+
+  @include isLarge {
+    padding: 0 20px;
+    overflow: visible;
+  }
+
+  a.sec-link-dark {
+    text-decoration: underline;
+  }
+  .containerish {
+    max-width: 1200px;
+    // height: 766px;
+    position: relative;
+    overflow: visible;
+
+    @include isMedium {
+      height: 350px;
+      .sec-info {
+        width: 50%;
+      }
+      .sec-img {
+        width: 40%;
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    @include isLarge {
+      height: 520px;
+      .sec-info {
+        width: 50%;
+        padding-top: 6rem;
+      }
+      .sec-img {
+        width: 40%;
+        right: 20px;
+        // transform: translateX(-50%);
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    @include isXLarge {
+      height: 766px;
+      .sec-info {
+        width: 50%;
+        padding-top: 8rem;
+      }
+      .sec-img {
+        width: 45%;
+        right: 20px;
+        // transform: translateX(-50%);
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+  .signup {
+    background: rgba(255,255,255,.93);
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    width: 90%;
+    max-width: 1085px;
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2rem;
+    border-radius: 20px;
+    z-index: 50;
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+
+    @include isMedium {
+      // max-width: 450px;
+      bottom: -90%;
+    }
+
+    @include isLarge {
+      // max-width: 450px;
+      bottom: -50%;
+    }
+
+    @include isXLarge {
+      // max-width: 450px;
+      bottom: -20%;
+    }
+
+    form.signup-form {
+      p {
+        line-height: 24px;
+      }
+      display: grid;
+      grid-gap: 1rem;
+
+      @include isMedium {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+      }
+      @include isLarge {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4rem;
+      }
+      .fine-print {
+        font-family: $font-primary;
+        font-size: 13px;
+        font-style: italic;
+        color: $color-main;
+      }
+
+      .inputs {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: .5rem;
+
+        @include isLarge {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        input {
+          height: 34px;
+          border-radius: 10px;
+          border: 1px solid grey;
+          padding-left: 1rem;
+        }
+      }
+      input[type="checkbox"] {
+        margin-bottom: 1rem;
+      }
+      label {
+        font-family: $font-primary !important;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+// skills
+.skills {
+  min-height: 500px;
+  background: url('../images/programs_bg@2x.jpg') top center / cover;
+
+  .containerish {
+      padding: 30rem 20px 2rem 20px;
+
+      @include isMedium {
+        padding: 27rem 20px 3rem 20px;
+      }
+
+      @include isLarge {
+        padding: 23rem 20px 4rem 20px;
+      }
+
+      @include isXLarge {
+        padding: 15rem 20px 4rem 20px;
+      }
+
+      .sec-info {
+        text-align: center;
+        p {
+          max-width: 784px;
+          margin: 0 auto;
+        }
+      }
+      .sec-image {
+        display: grid;
+        grid-gap: 1rem;
+
+        @include isMedium {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .img-wrapper {
+          position: relative;
+          border-radius: 10px;
+          overflow: hidden;
+          .program-title {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 20;
+            color: #fff;
+            font-family: $font-primary;
+            font-weight: 600;
+            font-size: 45px;
+            text-align: center;
+
+            @include isMedium {
+              font-size: 30px;
+            }
+            @include isLarge {
+              font-size: 35px;
+            }
+            @include isXLarge {
+              font-size: 45px;
+            }
+          }
+        }
+      }
+  }
+}
+
+// enroll today
+.enroll-today {
+  background: url('../images/start_career_bg@2x.jpg') center center / cover;
+  .containerish {
+    height: 100vh;
+    max-height: 938px;
+    padding: 40px 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    .sec-info {
+      text-align: center;
+      p {
+        max-width: 865px;
+      }
+    }
+
+  }
+}
+
+// about {
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 20px 2rem 20px;
+  display: grid;
+  grid-gap: 1rem;
+
+  @include isMedium {
+    grid-template-columns: 1fr 1.5fr;
+    grid-gap: 2rem;
+  }
+  @include isLarge {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+  @include isXLarge {
+    padding: 4rem 20px 0 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+
+    .sec-img {
+      margin-top: 4rem;
+      margin-bottom: -4rem;
+    }
+    .sec-info {
+      margin-top: 5rem;
+    }
+  }
+}
+
+// ally
+.ally {
+  background: url('../images/ally-bg@2x.jpg') center center / cover;
+  padding: 40px 20px;
+
+  @include isMedium {
+    padding: 60px 20px;
+  }
+  @include isXLarge {
+    padding: 150px 20px 60px 20px;
+  }
+
+  .containerish {
+    display: grid;
+    grid-gap: 2rem;
+
+    @include isMedium {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include isXLarge {
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+    }
+
+    .sec-info {
+      text-align: center;
+      p {
+        max-width: 784px;
+        margin: 0 auto;
+      }
+      @include isMedium {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .ally-img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 70%;
+        height: auto;
+        margin-bottom: 2rem;
+        border-radius: 50%;
+        box-shadow: 0 3px 20px rgba(0,0,0,.2);
+      }
+    }
+
+    .ally-title {
+      font-family: $font-primary;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    .ui-btn-main {
+      @include isMedium {
+        grid-column: 1 / -1;
+        justify-self: center;
+      }
+      @include isXLarge {
+        margin-top: 3rem;
+      }
+    }
+  }
 }

@@ -7,6 +7,9 @@
   position: relative;
   height: 100vh;
 
+  @include isLarge {
+    height: 665px;
+  }
   @include isXLarge {
     height: 750px;
   }
@@ -45,13 +48,17 @@
       background-size: cover;
       background-position: top 100px;
       position: absolute;
-      top: 150px;
+      top: 83px;
       left: 50%;
       transform: translateX(-50%);
       border-radius: 10px;
       grid-template-columns: 1fr 1fr;
       align-items: center;
       justify-content: center;
+    }
+
+    @include isXLarge {
+      top: 150px;
     }
 
     @include isRetina {
@@ -537,6 +544,112 @@
       }
       @include isXLarge {
         margin-top: 3rem;
+      }
+    }
+  }
+}
+
+// benefits
+.benefits {
+  background: url('../images/benefits_bg@2x.jpg') center center / cover;
+  padding: 40px 20px 0 20px;
+
+  @include isXLarge {
+    padding: 0 20px;
+    overflow: visible;
+  }
+  .containerish {
+    display: grid;
+    grid-gap: 2rem;
+
+    @include isLarge {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include isXLarge {
+      align-items: center;
+      overflow: visible;
+      grid-gap: 4rem;
+    }
+
+    .sec-image {
+      grid-row: 2;
+
+      @include isLarge {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      @include isXLarge {
+        margin-top: -3rem;
+      }
+    }
+  }
+}
+
+// testimonials
+.testimonials {
+  background: url('../images/testimonial_bg@2x.jpg') center center / cover;
+  text-align: center;
+  padding: 40px 20px;
+
+  @include isXLarge {
+    padding: 60px 20px 150px 20px;
+  }
+
+  .testimonial-slider {
+    margin-top: 3rem;
+    position: relative;
+
+    .test-content {
+      .testimonial-copy {
+        font-family: $font-primary;
+        font-style: italic;
+        font-size: 15px;
+        line-height: 30px;
+        font-weight: 300;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        @include isLarge {
+          font-size: 30px;
+          line-height: 60px;
+        }
+      }
+      .testimonial-credit {
+        font-family: $font-primary;
+        font-size: 13px;
+        font-weight: 600;
+
+        @include isLarge {
+          font-size: 25px;
+        }
+      }
+    }
+    .db-dots {
+      position: absolute;
+      bottom: 20%;
+      left: 50%;
+      background-color: red;
+
+      .slick-dots li {
+        width: 40px;
+        height: 40px;
+      }
+
+      .slick-dots li button:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "•";
+        width: 40px;
+        height: 40px;
+        font-family: "slick";
+        font-size: 40px;
+        line-height: 20px;
+        text-align: center;
+        color: #fff;
+        opacity: 0.25;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
     }
   }
